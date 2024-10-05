@@ -1,0 +1,38 @@
+{
+  "name": "r2uploader",
+  "version": "1.0.0",
+  "description": "A Node.js application to upload MP3 files and process Excel records",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.17.0",
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "prompt-sync": "^4.2.0",
+    "uuid": "^8.3.2",
+    "xlsx": "^0.17.0"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  },
+  "pkg": {
+    "scripts": [
+      "index.js"
+    ],
+    "assets": [
+      "./files/**/*",
+      "./excel/**/*"
+    ],
+    "targets": [
+      "node18-linux-x64",
+      "node18-macos-x64",
+      "node18-win-x64"
+    ]
+  },
+  "author": "Alex Aung Myo Oo",
+  "license": "ISC"
+}
